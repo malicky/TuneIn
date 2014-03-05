@@ -13,14 +13,21 @@
 		13A33DEA18C70C0C00C93783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13A33DE818C70C0C00C93783 /* InfoPlist.strings */; };
 		13A33DEC18C70C0C00C93783 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33DEB18C70C0C00C93783 /* main.m */; };
 		13A33DF018C70C0C00C93783 /* TIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33DEF18C70C0C00C93783 /* TIAppDelegate.m */; };
-		13A33DF318C70C0C00C93783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A33DF118C70C0C00C93783 /* Main.storyboard */; };
-		13A33DF618C70C0C00C93783 /* TIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33DF518C70C0C00C93783 /* TIViewController.m */; };
 		13A33DF818C70C0C00C93783 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A33DF718C70C0C00C93783 /* Images.xcassets */; };
 		13A33DFF18C70C0C00C93783 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A33DFE18C70C0C00C93783 /* XCTest.framework */; };
 		13A33E0018C70C0C00C93783 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A33DDF18C70C0C00C93783 /* Foundation.framework */; };
 		13A33E0118C70C0C00C93783 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A33DE318C70C0C00C93783 /* UIKit.framework */; };
 		13A33E0918C70C0C00C93783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13A33E0718C70C0C00C93783 /* InfoPlist.strings */; };
 		13A33E0B18C70C0C00C93783 /* TunedIn_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33E0A18C70C0C00C93783 /* TunedIn_testTests.m */; };
+		13A33E1518C70C5600C93783 /* TunedIn Tech Test_iOS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 13A33E1418C70C5600C93783 /* TunedIn Tech Test_iOS.pdf */; };
+		13A33E1718C70C6600C93783 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 13A33E1618C70C6600C93783 /* Podfile */; };
+		13A33E1B18C70DBA00C93783 /* TIVimeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33E1918C70DBA00C93783 /* TIVimeoViewController.m */; };
+		13A33E1C18C70DBA00C93783 /* TIVimeoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13A33E1A18C70DBA00C93783 /* TIVimeoViewController.xib */; };
+		13A33E1F18C70E0100C93783 /* TIVimeoJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33E1E18C70E0100C93783 /* TIVimeoJSONParser.m */; };
+		13A33E2218C70E4D00C93783 /* TIVimeoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33E2118C70E4D00C93783 /* TIVimeoCell.m */; };
+		13A33E2518C70E7400C93783 /* TIUserPortraitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33E2418C70E7400C93783 /* TIUserPortraitView.m */; };
+		13A33E2718C717F700C93783 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13A33E2618C717F700C93783 /* placeholder.jpg */; };
+		A00308A965924B3794E58B13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED37408C034047A7B7D7A80F /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +51,26 @@
 		13A33DED18C70C0C00C93783 /* TunedIn test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TunedIn test-Prefix.pch"; sourceTree = "<group>"; };
 		13A33DEE18C70C0C00C93783 /* TIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIAppDelegate.h; sourceTree = "<group>"; };
 		13A33DEF18C70C0C00C93783 /* TIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIAppDelegate.m; sourceTree = "<group>"; };
-		13A33DF218C70C0C00C93783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		13A33DF418C70C0C00C93783 /* TIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TIViewController.h; sourceTree = "<group>"; };
-		13A33DF518C70C0C00C93783 /* TIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIViewController.m; sourceTree = "<group>"; };
 		13A33DF718C70C0C00C93783 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		13A33DFD18C70C0C00C93783 /* TunedIn testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TunedIn testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A33DFE18C70C0C00C93783 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		13A33E0618C70C0C00C93783 /* TunedIn testTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TunedIn testTests-Info.plist"; sourceTree = "<group>"; };
 		13A33E0818C70C0C00C93783 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		13A33E0A18C70C0C00C93783 /* TunedIn_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TunedIn_testTests.m; sourceTree = "<group>"; };
+		13A33E1418C70C5600C93783 /* TunedIn Tech Test_iOS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TunedIn Tech Test_iOS.pdf"; sourceTree = "<group>"; };
+		13A33E1618C70C6600C93783 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		13A33E1818C70DBA00C93783 /* TIVimeoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIVimeoViewController.h; sourceTree = "<group>"; };
+		13A33E1918C70DBA00C93783 /* TIVimeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIVimeoViewController.m; sourceTree = "<group>"; };
+		13A33E1A18C70DBA00C93783 /* TIVimeoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TIVimeoViewController.xib; sourceTree = "<group>"; };
+		13A33E1D18C70E0100C93783 /* TIVimeoJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIVimeoJSONParser.h; sourceTree = "<group>"; };
+		13A33E1E18C70E0100C93783 /* TIVimeoJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIVimeoJSONParser.m; sourceTree = "<group>"; };
+		13A33E2018C70E4D00C93783 /* TIVimeoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIVimeoCell.h; sourceTree = "<group>"; };
+		13A33E2118C70E4D00C93783 /* TIVimeoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIVimeoCell.m; sourceTree = "<group>"; };
+		13A33E2318C70E7400C93783 /* TIUserPortraitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIUserPortraitView.h; sourceTree = "<group>"; };
+		13A33E2418C70E7400C93783 /* TIUserPortraitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIUserPortraitView.m; sourceTree = "<group>"; };
+		13A33E2618C717F700C93783 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
+		973CD377BD8E4A49A7582722 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		ED37408C034047A7B7D7A80F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +81,7 @@
 				13A33DE218C70C0C00C93783 /* CoreGraphics.framework in Frameworks */,
 				13A33DE418C70C0C00C93783 /* UIKit.framework in Frameworks */,
 				13A33DE018C70C0C00C93783 /* Foundation.framework in Frameworks */,
+				A00308A965924B3794E58B13 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,10 +101,13 @@
 		13A33DD318C70C0B00C93783 = {
 			isa = PBXGroup;
 			children = (
+				13A33E1418C70C5600C93783 /* TunedIn Tech Test_iOS.pdf */,
+				13A33E1618C70C6600C93783 /* Podfile */,
 				13A33DE518C70C0C00C93783 /* TunedIn test */,
 				13A33E0418C70C0C00C93783 /* TunedIn testTests */,
 				13A33DDE18C70C0C00C93783 /* Frameworks */,
 				13A33DDD18C70C0C00C93783 /* Products */,
+				973CD377BD8E4A49A7582722 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +127,7 @@
 				13A33DE118C70C0C00C93783 /* CoreGraphics.framework */,
 				13A33DE318C70C0C00C93783 /* UIKit.framework */,
 				13A33DFE18C70C0C00C93783 /* XCTest.framework */,
+				ED37408C034047A7B7D7A80F /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,9 +137,16 @@
 			children = (
 				13A33DEE18C70C0C00C93783 /* TIAppDelegate.h */,
 				13A33DEF18C70C0C00C93783 /* TIAppDelegate.m */,
-				13A33DF118C70C0C00C93783 /* Main.storyboard */,
-				13A33DF418C70C0C00C93783 /* TIViewController.h */,
-				13A33DF518C70C0C00C93783 /* TIViewController.m */,
+				13A33E1D18C70E0100C93783 /* TIVimeoJSONParser.h */,
+				13A33E1E18C70E0100C93783 /* TIVimeoJSONParser.m */,
+				13A33E1818C70DBA00C93783 /* TIVimeoViewController.h */,
+				13A33E1918C70DBA00C93783 /* TIVimeoViewController.m */,
+				13A33E1A18C70DBA00C93783 /* TIVimeoViewController.xib */,
+				13A33E2018C70E4D00C93783 /* TIVimeoCell.h */,
+				13A33E2118C70E4D00C93783 /* TIVimeoCell.m */,
+				13A33E2318C70E7400C93783 /* TIUserPortraitView.h */,
+				13A33E2418C70E7400C93783 /* TIUserPortraitView.m */,
+				13A33E2618C717F700C93783 /* placeholder.jpg */,
 				13A33DF718C70C0C00C93783 /* Images.xcassets */,
 				13A33DE618C70C0C00C93783 /* Supporting Files */,
 			);
@@ -159,9 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13A33E0E18C70C0C00C93783 /* Build configuration list for PBXNativeTarget "TunedIn test" */;
 			buildPhases = (
+				64E18613462B41B495456509 /* Check Pods Manifest.lock */,
 				13A33DD818C70C0C00C93783 /* Sources */,
 				13A33DD918C70C0C00C93783 /* Frameworks */,
 				13A33DDA18C70C0C00C93783 /* Resources */,
+				1B42E2BCA27F472990239A9C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,8 +262,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A33DF818C70C0C00C93783 /* Images.xcassets in Resources */,
+				13A33E2718C717F700C93783 /* placeholder.jpg in Resources */,
 				13A33DEA18C70C0C00C93783 /* InfoPlist.strings in Resources */,
-				13A33DF318C70C0C00C93783 /* Main.storyboard in Resources */,
+				13A33E1C18C70DBA00C93783 /* TIVimeoViewController.xib in Resources */,
+				13A33E1718C70C6600C93783 /* Podfile in Resources */,
+				13A33E1518C70C5600C93783 /* TunedIn Tech Test_iOS.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,13 +280,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B42E2BCA27F472990239A9C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64E18613462B41B495456509 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		13A33DD818C70C0C00C93783 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13A33DF618C70C0C00C93783 /* TIViewController.m in Sources */,
 				13A33DEC18C70C0C00C93783 /* main.m in Sources */,
+				13A33E2518C70E7400C93783 /* TIUserPortraitView.m in Sources */,
+				13A33E1B18C70DBA00C93783 /* TIVimeoViewController.m in Sources */,
+				13A33E1F18C70E0100C93783 /* TIVimeoJSONParser.m in Sources */,
+				13A33E2218C70E4D00C93783 /* TIVimeoCell.m in Sources */,
 				13A33DF018C70C0C00C93783 /* TIAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,14 +352,6 @@
 				13A33DE918C70C0C00C93783 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		13A33DF118C70C0C00C93783 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13A33DF218C70C0C00C93783 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		13A33E0718C70C0C00C93783 /* InfoPlist.strings */ = {
@@ -376,12 +439,14 @@
 		};
 		13A33E0F18C70C0C00C93783 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 973CD377BD8E4A49A7582722 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TunedIn test/TunedIn test-Prefix.pch";
 				INFOPLIST_FILE = "TunedIn test/TunedIn test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -389,12 +454,14 @@
 		};
 		13A33E1018C70C0C00C93783 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 973CD377BD8E4A49A7582722 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TunedIn test/TunedIn test-Prefix.pch";
 				INFOPLIST_FILE = "TunedIn test/TunedIn test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -461,6 +528,7 @@
 				13A33E1018C70C0C00C93783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13A33E1118C70C0C00C93783 /* Build configuration list for PBXNativeTarget "TunedIn testTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +537,7 @@
 				13A33E1318C70C0C00C93783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

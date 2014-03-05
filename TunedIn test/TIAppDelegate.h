@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+// forward declarations
+@class TIVimeoViewController;
+@class AFHTTPClient;
+
 @interface TIAppDelegate : UIResponder <UIApplicationDelegate>
 
+// getters
+- (NSArray *)getVimeosDescriptions;
+- (AFHTTPClient *)getImageDownloader;
+
 @property (strong, nonatomic) UIWindow *window;
+
+// main view controller
+@property (strong, nonatomic) TIVimeoViewController *viewController;
 
 @end
