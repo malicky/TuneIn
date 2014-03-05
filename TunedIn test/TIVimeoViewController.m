@@ -17,8 +17,6 @@ static int kNumberOfRowsInSection = 2;
 
 
 @interface TIVimeoViewController ()
-// JSON parser results
-@property (nonatomic, strong) NSArray *resultsJSON;
 
 @property (nonatomic, strong) NSArray *datasource;
 
@@ -30,8 +28,6 @@ static int kNumberOfRowsInSection = 2;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-//        TIAppDelegate *appDelegate = (TIAppDelegate*)[[UIApplication sharedApplication] delegate];
-//        self.datasource = [appDelegate getVideoDescriptions];
     }
     return self;
 }
@@ -48,11 +44,10 @@ static int kNumberOfRowsInSection = 2;
     
     [[TIVimeoJSONParser sharedParser] retrieveVideosPath:path parameters:parameters
                                                  success:^(NSArray *descriptions) {
-                                                     self.resultsJSON = descriptions;
-                                                     NSLog(@"Success:\n%@", self.resultsJSON);
-                                                     self.datasource = self.resultsJSON;
-                                                     
-                                                     
+                                                     NSLog(@"Success:\n%@", descriptions);
+                                                     // set datasource to JSON array
+                                                     self.datasource = descriptions;
+                                                     // force the call of delegate methods with data from datasource
                                                      [self.collectionView reloadData];
                                                  } failure:^(NSError *error) {
                                                      NSLog(@"Failure\n%@", error);
@@ -90,18 +85,19 @@ static int kNumberOfRowsInSection = 2;
     return cell;
 }
 
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
-           viewForSupplementaryElementOfKind:(NSString *)kind
-                                 atIndexPath:(NSIndexPath *)indexPath {
-    static NSString *supplementaryViewIdentifier = @"supplementaryViewIdentifier";
-    [self.collectionView registerClass:[TIUserPortraitView class]forCellWithReuseIdentifier:supplementaryViewIdentifier];
-    TIUserPortraitView *userView = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:supplementaryViewIdentifier forIndexPath:indexPath];
-    
-    NSDictionary *video = [self.datasource objectAtIndex:[indexPath section] * kNumberOfRowsInSection + [indexPath row]];
-    userView.userLabel.text = [video objectForKey:@"user_name"];
-    
-    return userView;
-}
+//- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
+//           viewForSupplementaryElementOfKind:(NSString *)kind
+//                                 atIndexPath:(NSIndexPath *)indexPath {
+//    static NSString *supplementaryViewIdentifier = @"supplementaryViewIdentifier";
+//    [self.collectionView registerClass:[TIUserPortraitView class]forCellWithReuseIdentifier:supplementaryViewIdentifier];
+//    TIUserPortraitView *userView = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:supplementaryViewIdentifier forIndexPath:indexPath];
+//    
+//    NSDictionary *video = [self.datasource objectAtIndex:[indexPath section] * kNumberOfRowsInSection + [indexPath row]];
+//    userView.userLabel.text = [video objectForKey:@"user_name"];
+//    
+//    return userView;
+//}
+
 #pragma mark -
 #pragma mark Collection View Delegate Methods
 

@@ -15,12 +15,11 @@
 @interface TIAppDelegate : UIResponder <UIApplicationDelegate>
 
 // getters
-- (NSArray *)getVideoDescriptions;
 - (AFHTTPClient *)getImageDownloader;
 
 @property (strong, nonatomic) UIWindow *window;
 
-// main view controller
+// root view controller presenting parsed vimeo records
 @property (strong, nonatomic) TIVimeoViewController *viewController;
 
 @end

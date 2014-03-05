@@ -11,10 +11,12 @@
 #import "AFHTTPClient.h"
 #import "AFJSONRequestOperation.h"
 
+// base url Vimeo API
 static NSString *BaseURL = @"http://vimeo.com/api/v2/";
 
 @interface TIVimeoJSONParser ()
 
+// AFHTTPClient to GET and parse JSON
 @property (nonatomic, strong) AFHTTPClient *client;
 
 @end
@@ -40,7 +42,9 @@ static NSString *BaseURL = @"http://vimeo.com/api/v2/";
         return nil;
     }
     
+    // Initialise
     self.client = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:BaseURL]];
+    // set to JSON type
     [self.client registerHTTPOperationClass:[AFJSONRequestOperation class]];
     
     return self;

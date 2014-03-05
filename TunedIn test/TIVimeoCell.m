@@ -66,13 +66,14 @@
         _videoDescrition = video;
         
         // subviews
-        NSMutableString *text __unused = [NSMutableString string];
+        NSMutableString *text = [NSMutableString string];
         
         NSString *title = video[@"title"];
         NSString *description = video[@"description"];
         NSString *upload_date = video[@"upload_date"];
         NSString *user_name = video[@"user_name"];
         
+        // build the description text by concatenation
         if(title){
             [text appendString:@"Title: "];
             [text appendString:title];
