@@ -62,7 +62,7 @@ static NSString *BaseURL = @"http://b.vimeocdn.com";
     return self.downloader;
 }
 
-- (NSArray *)getVimeosDescriptions {
+- (NSArray *)getVideoDescriptions {
     return self.resultsJSON;
 }
 

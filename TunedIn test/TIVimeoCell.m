@@ -61,7 +61,7 @@
 }
 
 
-- (void)setVideo:(NSDictionary *)video {
+- (void)setVideoDescrition:(NSDictionary *)video {
     if (_videoDescrition != video) {
         _videoDescrition = video;
         

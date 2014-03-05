@@ -15,7 +15,7 @@
 @interface TIAppDelegate : UIResponder <UIApplicationDelegate>
 
 // getters
-- (NSArray *)getVimeosDescriptions;
+- (NSArray *)getVideoDescriptions;
 - (AFHTTPClient *)getImageDownloader;
 
 @property (strong, nonatomic) UIWindow *window;
