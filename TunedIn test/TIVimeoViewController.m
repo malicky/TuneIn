@@ -8,6 +8,7 @@
 
 #import "TIVimeoViewController.h"
 
+#import "TIVimeoJSONParser.h"
 #import "TIAppDelegate.h"
 #import "TIVimeoCell.h"
 #import "TIUserPortraitView.h"
@@ -16,6 +17,8 @@ static int kNumberOfRowsInSection = 2;
 
 
 @interface TIVimeoViewController ()
+// JSON parser results
+@property (nonatomic, strong) NSArray *resultsJSON;
 
 @property (nonatomic, strong) NSArray *datasource;
 
@@ -27,8 +30,8 @@ static int kNumberOfRowsInSection = 2;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        TIAppDelegate *appDelegate = (TIAppDelegate*)[[UIApplication sharedApplication] delegate];
-        self.datasource = [appDelegate getVideoDescriptions];
+//        TIAppDelegate *appDelegate = (TIAppDelegate*)[[UIApplication sharedApplication] delegate];
+//        self.datasource = [appDelegate getVideoDescriptions];
     }
     return self;
 }
@@ -36,7 +39,24 @@ static int kNumberOfRowsInSection = 2;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    NSString *path = @"album/58/videos.json";
+    
+    NSDictionary *parameters = @{
+                                 @"page": @(1)
+                                 };
+    
+    [[TIVimeoJSONParser sharedParser] retrieveVideosPath:path parameters:parameters
+                                                 success:^(NSArray *descriptions) {
+                                                     self.resultsJSON = descriptions;
+                                                     NSLog(@"Success:\n%@", self.resultsJSON);
+                                                     self.datasource = self.resultsJSON;
+                                                     
+                                                     
+                                                     [self.collectionView reloadData];
+                                                 } failure:^(NSError *error) {
+                                                     NSLog(@"Failure\n%@", error);
+                                                 }];
 }
 
 - (void)didReceiveMemoryWarning

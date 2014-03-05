@@ -33,7 +33,13 @@ static NSString *BaseURL = @"http://b.vimeocdn.com";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.downloader = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:BaseURL]];
-    
+#if 1
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.viewController = [[TIVimeoViewController alloc] initWithNibName:@"TIVimeoViewController" bundle:nil];
+    self.window.rootViewController = self.viewController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+  #else
     NSString *path = @"album/58/videos.json";
     
     NSDictionary *parameters = @{
@@ -49,11 +55,11 @@ static NSString *BaseURL = @"http://b.vimeocdn.com";
                                                       } failure:^(NSError *error) {
                                                           NSLog(@"Failure\n%@", error);
                                                       }];
-    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
+#endif
     
     return YES;
 }
