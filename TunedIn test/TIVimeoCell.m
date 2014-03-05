@@ -55,6 +55,10 @@
     self.thumbNailView = [[UIImageView alloc] initWithFrame:thumbnailFrame];
     self.thumbNailView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
     self.thumbNailView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    self.thumbNailView.layer.borderColor = [[UIColor whiteColor] CGColor];
+    self.thumbNailView.layer.borderWidth = 3.0f;
+    
     [self.contentView addSubview:self.thumbNailView];
         
     return self;
@@ -69,6 +73,7 @@
         NSMutableString *text = [NSMutableString string];
         
         NSString *title = video[@"title"];
+
         NSString *description = video[@"description"];
         NSString *upload_date = video[@"upload_date"];
         NSString *user_name = video[@"user_name"];
@@ -80,6 +85,10 @@
             [text appendString:@"\n"];
         }
         if(description){
+            description = [description stringByReplacingOccurrencesOfString:@"<br />" withString:@""];
+            description = [description stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+
+
             [text appendString:@"About:"];
             [text appendString:description];
             [text appendString:@"\n"];
@@ -94,8 +103,12 @@
             [text appendString:user_name];
             [text appendString:@"\n"];
         }
-        self.videoDescription.text = text;
         
+        NSString *clean = text;
+        //clean = [clean stringByReplacingOccurrencesOfString:@"<br />\n<br />" withString:@""];
+        self.videoDescription.text = clean;
+        
+       [self.videoDescription sizeToFit];
         // download the image referenced in the url @"thumbnail_medium"
         //  build the request
         TIAppDelegate *appDelegate = (TIAppDelegate*)[[UIApplication sharedApplication] delegate];
