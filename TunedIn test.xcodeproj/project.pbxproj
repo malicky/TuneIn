@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131F696018C738240014A2AC /* Readme in Resources */ = {isa = PBXBuildFile; fileRef = 131F695F18C738240014A2AC /* Readme */; };
 		13A33DE018C70C0C00C93783 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A33DDF18C70C0C00C93783 /* Foundation.framework */; };
 		13A33DE218C70C0C00C93783 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A33DE118C70C0C00C93783 /* CoreGraphics.framework */; };
 		13A33DE418C70C0C00C93783 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A33DE318C70C0C00C93783 /* UIKit.framework */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		131F695F18C738240014A2AC /* Readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
 		13A33DDC18C70C0C00C93783 /* TunedIn test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TunedIn test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A33DDF18C70C0C00C93783 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		13A33DE118C70C0C00C93783 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,6 +101,7 @@
 		13A33DD318C70C0B00C93783 = {
 			isa = PBXGroup;
 			children = (
+				131F695F18C738240014A2AC /* Readme */,
 				13A33E1618C70C6600C93783 /* Podfile */,
 				13A33DE518C70C0C00C93783 /* TunedIn test */,
 				13A33E0418C70C0C00C93783 /* TunedIn testTests */,
@@ -262,6 +265,7 @@
 				13A33E2718C717F700C93783 /* placeholder.jpg in Resources */,
 				13A33DEA18C70C0C00C93783 /* InfoPlist.strings in Resources */,
 				13A33E1C18C70DBA00C93783 /* TIVimeoViewController.xib in Resources */,
+				131F696018C738240014A2AC /* Readme in Resources */,
 				13A33E1718C70C6600C93783 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
