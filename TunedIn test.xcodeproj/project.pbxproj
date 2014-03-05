@@ -19,7 +19,6 @@
 		13A33E0118C70C0C00C93783 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A33DE318C70C0C00C93783 /* UIKit.framework */; };
 		13A33E0918C70C0C00C93783 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13A33E0718C70C0C00C93783 /* InfoPlist.strings */; };
 		13A33E0B18C70C0C00C93783 /* TunedIn_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33E0A18C70C0C00C93783 /* TunedIn_testTests.m */; };
-		13A33E1518C70C5600C93783 /* TunedIn Tech Test_iOS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 13A33E1418C70C5600C93783 /* TunedIn Tech Test_iOS.pdf */; };
 		13A33E1718C70C6600C93783 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 13A33E1618C70C6600C93783 /* Podfile */; };
 		13A33E1B18C70DBA00C93783 /* TIVimeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33E1918C70DBA00C93783 /* TIVimeoViewController.m */; };
 		13A33E1C18C70DBA00C93783 /* TIVimeoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13A33E1A18C70DBA00C93783 /* TIVimeoViewController.xib */; };
@@ -57,7 +56,6 @@
 		13A33E0618C70C0C00C93783 /* TunedIn testTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TunedIn testTests-Info.plist"; sourceTree = "<group>"; };
 		13A33E0818C70C0C00C93783 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		13A33E0A18C70C0C00C93783 /* TunedIn_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TunedIn_testTests.m; sourceTree = "<group>"; };
-		13A33E1418C70C5600C93783 /* TunedIn Tech Test_iOS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "TunedIn Tech Test_iOS.pdf"; sourceTree = "<group>"; };
 		13A33E1618C70C6600C93783 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		13A33E1818C70DBA00C93783 /* TIVimeoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIVimeoViewController.h; sourceTree = "<group>"; };
 		13A33E1918C70DBA00C93783 /* TIVimeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIVimeoViewController.m; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		13A33DD318C70C0B00C93783 = {
 			isa = PBXGroup;
 			children = (
-				13A33E1418C70C5600C93783 /* TunedIn Tech Test_iOS.pdf */,
 				13A33E1618C70C6600C93783 /* Podfile */,
 				13A33DE518C70C0C00C93783 /* TunedIn test */,
 				13A33E0418C70C0C00C93783 /* TunedIn testTests */,
@@ -266,7 +263,6 @@
 				13A33DEA18C70C0C00C93783 /* InfoPlist.strings in Resources */,
 				13A33E1C18C70DBA00C93783 /* TIVimeoViewController.xib in Resources */,
 				13A33E1718C70C6600C93783 /* Podfile in Resources */,
-				13A33E1518C70C5600C93783 /* TunedIn Tech Test_iOS.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
