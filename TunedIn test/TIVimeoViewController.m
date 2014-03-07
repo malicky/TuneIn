@@ -85,18 +85,26 @@ static int kNumberOfRowsInSection = 2;
     return cell;
 }
 
-//- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
-//           viewForSupplementaryElementOfKind:(NSString *)kind
-//                                 atIndexPath:(NSIndexPath *)indexPath {
-//    static NSString *supplementaryViewIdentifier = @"supplementaryViewIdentifier";
-//    [self.collectionView registerNib:[UINib nibWithNibName:@"TIUserPortraitView" bundle:nil] forCellWithReuseIdentifier:supplementaryViewIdentifier];
-//    TIUserPortraitView *userView = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:supplementaryViewIdentifier forIndexPath:indexPath];
-//    
-//    NSDictionary *video = [self.datasource objectAtIndex:[indexPath section] * kNumberOfRowsInSection + [indexPath row]];
-//    userView.userLabel.text = [video objectForKey:@"user_name"];
-//    
-//    return userView;
-//}
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
+           viewForSupplementaryElementOfKind:(NSString *)kind
+                                 atIndexPath:(NSIndexPath *)indexPath {
+    TIUserPortraitView *userView = nil;
+    if (UICollectionElementKindSectionFooter) {
+        static NSString *supplementaryViewIdentifier = @"supplementaryViewIdentifier";
+        
+        [self.collectionView registerClass:[TIUserPortraitView class]
+                forSupplementaryViewOfKind:UICollectionElementKindSectionFooter
+                       withReuseIdentifier:supplementaryViewIdentifier];
+         
+         userView = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter
+                                                            withReuseIdentifier:supplementaryViewIdentifier forIndexPath:indexPath];
+         
+         NSDictionary *video = [self.datasource objectAtIndex:[indexPath section] * kNumberOfRowsInSection + [indexPath row]];
+         userView.userLabel.text = [video objectForKey:@"user_name"];
+    }
+    
+    return userView;
+}
 
 #pragma mark -
 #pragma mark Collection View Delegate Methods
