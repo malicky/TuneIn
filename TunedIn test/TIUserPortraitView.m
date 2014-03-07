@@ -44,7 +44,7 @@
     [self addSubview:self.videoDescription];
     
     // thumbnail
-    CGRect userPortraitFrame = CGRectMake(0., 40, bounds.size.width, bounds.size.height - 20.);
+    CGRect userPortraitFrame = CGRectMake(0., 20, bounds.size.width, bounds.size.height - 20.);
     self.userPortrait = [[UIImageView alloc] initWithFrame:userPortraitFrame];
     self.userPortrait.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
     self.userPortrait.contentMode = UIViewContentModeScaleAspectFit;
