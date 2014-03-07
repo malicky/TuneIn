@@ -12,6 +12,7 @@
 #import "TIAppDelegate.h"
 #import "AFHTTPClient.h"
 
+static int kMaxCharDescription = 175;
 
 @interface TIVimeoCell ()
 
@@ -87,7 +88,12 @@
         if(description){
             description = [description stringByReplacingOccurrencesOfString:@"<br />" withString:@""];
             description = [description stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-
+            if ([description length] >= kMaxCharDescription) {// cut too long descriptions
+                NSRange stringRange = {0, MIN([description length], kMaxCharDescription)};
+                stringRange = [description rangeOfComposedCharacterSequencesForRange:stringRange];
+                description = [description substringWithRange:stringRange];
+                description = [description stringByAppendingString:@"..."];
+            }
 
             [text appendString:@"About:"];
             [text appendString:description];
@@ -105,10 +111,9 @@
         }
         
         NSString *clean = text;
-        //clean = [clean stringByReplacingOccurrencesOfString:@"<br />\n<br />" withString:@""];
         self.videoDescription.text = clean;
-        
        [self.videoDescription sizeToFit];
+        
         // download the image referenced in the url @"thumbnail_medium"
         //  build the request
         TIAppDelegate *appDelegate = (TIAppDelegate*)[[UIApplication sharedApplication] delegate];
