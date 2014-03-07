@@ -12,7 +12,7 @@
 #import "TIAppDelegate.h"
 #import "AFHTTPClient.h"
 
-static int kMaxCharDescription = 175;
+static int kMaxCharDescription = 100;
 
 @interface TIVimeoCell ()
 
@@ -58,7 +58,7 @@ static int kMaxCharDescription = 175;
     self.thumbNailView.contentMode = UIViewContentModeScaleAspectFit;
     
     self.thumbNailView.layer.borderColor = [[UIColor whiteColor] CGColor];
-    self.thumbNailView.layer.borderWidth = 3.0f;
+    self.thumbNailView.layer.borderWidth = 1.0f;
     
     [self.contentView addSubview:self.thumbNailView];
         
@@ -77,7 +77,6 @@ static int kMaxCharDescription = 175;
 
         NSString *description = video[@"description"];
         NSString *upload_date = video[@"upload_date"];
-        NSString *user_name = video[@"user_name"];
         
         // build the description text by concatenation
         if(title){
@@ -104,11 +103,7 @@ static int kMaxCharDescription = 175;
             [text appendString:upload_date];
             [text appendString:@"\n"];
         }
-        if(user_name){
-            [text appendString:@"Author: "];
-            [text appendString:user_name];
-            [text appendString:@"\n"];
-        }
+     
         
         NSString *clean = text;
         self.videoDescription.text = clean;

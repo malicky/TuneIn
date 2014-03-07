@@ -10,8 +10,6 @@
 
 @interface TIUserPortraitView : UICollectionReusableView
 
-@property (nonatomic, strong) UILabel *userLabel;
-@property (nonatomic, strong) UIImageView *userPortrait;
-
+@property (nonatomic, strong) NSDictionary *videoDescrition;
 
 @end

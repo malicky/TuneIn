@@ -14,7 +14,8 @@
 #import "TIUserPortraitView.h"
 
 static int kNumberOfRowsInSection = 2;
-
+static NSString *supplementaryViewIdentifier = @"supplementaryViewIdentifier";
+static NSString *cellIdentifier = @"Cell Identifier";
 
 @interface TIVimeoViewController ()
 
@@ -35,6 +36,14 @@ static int kNumberOfRowsInSection = 2;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    [self.collectionView registerClass:[TIUserPortraitView class]
+            forSupplementaryViewOfKind:UICollectionElementKindSectionFooter
+                   withReuseIdentifier:supplementaryViewIdentifier];
+
+    [self.collectionView registerClass:[TIVimeoCell class] forCellWithReuseIdentifier:cellIdentifier];
+
 
     NSString *path = @"album/58/videos.json";
     
@@ -64,17 +73,15 @@ static int kNumberOfRowsInSection = 2;
 #pragma mark Collection View Data Source Methods
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return [self.datasource count]/kNumberOfRowsInSection;
+    return 1; //[self.datasource count]/kNumberOfRowsInSection;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return kNumberOfRowsInSection;
+    return [self.datasource count];//kNumberOfRowsInSection;
 }
 
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"Cell Identifier";
-    [collectionView registerClass:[TIVimeoCell class] forCellWithReuseIdentifier:cellIdentifier];
-    TIVimeoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+        TIVimeoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     // fetch
     NSDictionary *video = [self.datasource objectAtIndex:[indexPath section] * kNumberOfRowsInSection + [indexPath row]];
     NSLog(@" item at  %i, %i %@" ,indexPath.section, indexPath.row, video);
@@ -90,17 +97,12 @@ static int kNumberOfRowsInSection = 2;
                                  atIndexPath:(NSIndexPath *)indexPath {
     TIUserPortraitView *userView = nil;
     if (UICollectionElementKindSectionFooter) {
-        static NSString *supplementaryViewIdentifier = @"supplementaryViewIdentifier";
         
-        [self.collectionView registerClass:[TIUserPortraitView class]
-                forSupplementaryViewOfKind:UICollectionElementKindSectionFooter
-                       withReuseIdentifier:supplementaryViewIdentifier];
-         
          userView = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter
                                                             withReuseIdentifier:supplementaryViewIdentifier forIndexPath:indexPath];
          
          NSDictionary *video = [self.datasource objectAtIndex:[indexPath section] * kNumberOfRowsInSection + [indexPath row]];
-         userView.userLabel.text = [video objectForKey:@"user_name"];
+        [userView setVideoDescrition:video];
     }
     
     return userView;
@@ -123,12 +125,6 @@ static int kNumberOfRowsInSection = 2;
     return UIEdgeInsetsMake(25.0, 25.0, 50.0, 25.0);
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView
-                   layout:(UICollectionViewLayout*)collectionViewLayout
-minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    
-    return 8.0;
-}
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView
                    layout:(UICollectionViewLayout*)collectionViewLayout
