@@ -27,6 +27,7 @@
 		13A33E2218C70E4D00C93783 /* TIVimeoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33E2118C70E4D00C93783 /* TIVimeoCell.m */; };
 		13A33E2518C70E7400C93783 /* TIUserPortraitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A33E2418C70E7400C93783 /* TIUserPortraitView.m */; };
 		13A33E2718C717F700C93783 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13A33E2618C717F700C93783 /* placeholder.jpg */; };
+		13AE0A6918CB613800DDFD78 /* NSMutableAttributedString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AE0A6818CB613800DDFD78 /* NSMutableAttributedString+Helper.m */; };
 		A00308A965924B3794E58B13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED37408C034047A7B7D7A80F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		13A33E2318C70E7400C93783 /* TIUserPortraitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIUserPortraitView.h; sourceTree = "<group>"; };
 		13A33E2418C70E7400C93783 /* TIUserPortraitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIUserPortraitView.m; sourceTree = "<group>"; };
 		13A33E2618C717F700C93783 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
+		13AE0A6718CB613800DDFD78 /* NSMutableAttributedString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Helper.h"; sourceTree = "<group>"; };
+		13AE0A6818CB613800DDFD78 /* NSMutableAttributedString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Helper.m"; sourceTree = "<group>"; };
 		973CD377BD8E4A49A7582722 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		ED37408C034047A7B7D7A80F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -149,6 +152,8 @@
 				13A33E2418C70E7400C93783 /* TIUserPortraitView.m */,
 				13A33E2618C717F700C93783 /* placeholder.jpg */,
 				13A33DE618C70C0C00C93783 /* Supporting Files */,
+				13AE0A6718CB613800DDFD78 /* NSMutableAttributedString+Helper.h */,
+				13AE0A6818CB613800DDFD78 /* NSMutableAttributedString+Helper.m */,
 			);
 			path = "TunedIn test";
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 				13A33E2518C70E7400C93783 /* TIUserPortraitView.m in Sources */,
 				13A33E1B18C70DBA00C93783 /* TIVimeoViewController.m in Sources */,
 				13A33E1F18C70E0100C93783 /* TIVimeoJSONParser.m in Sources */,
+				13AE0A6918CB613800DDFD78 /* NSMutableAttributedString+Helper.m in Sources */,
 				13A33E2218C70E4D00C93783 /* TIVimeoCell.m in Sources */,
 				13A33DF018C70C0C00C93783 /* TIAppDelegate.m in Sources */,
 			);

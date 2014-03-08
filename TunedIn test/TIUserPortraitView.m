@@ -10,6 +10,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "TIAppDelegate.h"
 #import "AFHTTPClient.h"
+#import "NSMutableAttributedString+Helper.h"
 
 @interface TIUserPortraitView ()
 
@@ -61,15 +62,16 @@
         _videoDescrition = video;
         
         // subviews
-        NSMutableString *text = [NSMutableString string];
+        NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:@""];
         NSString *user_name = video[@"user_name"];
-        if(user_name){
-            [text appendString:@"Author: "];
-            [text appendString:user_name];
-            [text appendString:@"\n"];
+        if(user_name) {
+            
+            [text appendAttributedString: [text TIVimeoFormatLabelString:@"Author: "]];
+            [text appendAttributedString:[[NSMutableAttributedString alloc] initWithString:user_name]];
+            [text appendAttributedString:[[NSMutableAttributedString alloc] initWithString:@"\n"]];
         }
         
-        self.videoDescription.text = text;
+        self.videoDescription.attributedText = text;
         [self.videoDescription sizeToFit];
         
         // download the image referenced in the url @"thumbnail_medium"

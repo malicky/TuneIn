@@ -11,6 +11,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "TIAppDelegate.h"
 #import "AFHTTPClient.h"
+#import "NSMutableAttributedString+Helper.h"
 
 static int kMaxCharDescription = 100;
 
@@ -71,42 +72,44 @@ static int kMaxCharDescription = 100;
         _videoDescrition = video;
         
         // subviews
-        NSMutableString *text = [NSMutableString string];
+         NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:@""];
         
         NSString *title = video[@"title"];
-
         NSString *description = video[@"description"];
         NSString *upload_date = video[@"upload_date"];
         
+
         // build the description text by concatenation
-        if(title){
-            [text appendString:@"Title: "];
-            [text appendString:title];
-            [text appendString:@"\n"];
+        if(title) {
+            [text appendAttributedString: [text TIVimeoFormatLabelString:@"Title: "]];
+            [text appendAttributedString:[[NSMutableAttributedString alloc] initWithString:title]];
+            [text appendAttributedString:[[NSMutableAttributedString alloc] initWithString:@"\n"]];
+ 
         }
-        if(description){
+        if(description) {
             description = [description stringByReplacingOccurrencesOfString:@"<br />" withString:@""];
             description = [description stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+            
             if ([description length] >= kMaxCharDescription) {// cut too long descriptions
                 NSRange stringRange = {0, MIN([description length], kMaxCharDescription)};
                 stringRange = [description rangeOfComposedCharacterSequencesForRange:stringRange];
                 description = [description substringWithRange:stringRange];
                 description = [description stringByAppendingString:@"..."];
             }
+            
+            [text appendAttributedString: [text TIVimeoFormatLabelString:@"About: "]];
+            [text appendAttributedString:[[NSMutableAttributedString alloc] initWithString:description]];
+            [text appendAttributedString:[[NSMutableAttributedString alloc] initWithString:@"\n"]];
 
-            [text appendString:@"About:"];
-            [text appendString:description];
-            [text appendString:@"\n"];
         }
-        if(upload_date){
-            [text appendString:@"Date: "];
-            [text appendString:upload_date];
-            [text appendString:@"\n"];
+        if(upload_date) {
+            [text appendAttributedString: [text TIVimeoFormatLabelString:@"Date: "]];
+            [text appendAttributedString:[[NSMutableAttributedString alloc] initWithString:upload_date]];
+            [text appendAttributedString:[[NSMutableAttributedString alloc] initWithString:@"\n"]];
         }
      
         
-        NSString *clean = text;
-        self.videoDescription.text = clean;
+        self.videoDescription.attributedText = text;
        [self.videoDescription sizeToFit];
         
         // download the image referenced in the url @"thumbnail_medium"
